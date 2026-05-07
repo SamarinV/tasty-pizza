@@ -1,7 +1,4 @@
-import { useRef } from 'react'
-import s from './promo.module.scss'
-
-const promoItems = [
+export const promoItems = [
 	{
 		id: 1,
 		title: 'Скидка 20% на всё меню',
@@ -10,7 +7,8 @@ const promoItems = [
 	{
 		id: 2,
 		title: '2 пиццы по цене 1',
-		image: 'https://images.unsplash.com/photo-1548365328-8b849e4a8f3f',
+		image:
+			'https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
 	},
 	{
 		id: 3,
@@ -43,41 +41,3 @@ const promoItems = [
 		image: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97',
 	},
 ]
-
-const Promo = () => {
-	const sliderRef = useRef<HTMLDivElement>(null)
-
-	const scroll = (dir: 'left' | 'right') => {
-		if (!sliderRef.current) return
-
-		const width = 320
-
-		sliderRef.current.scrollBy({
-			left: dir === 'left' ? -width : width,
-			behavior: 'smooth',
-		})
-	}
-
-	return (
-		<div className={s.wrapper}>
-			<button className={s.arrowLeft} onClick={() => scroll('left')}>
-				‹
-			</button>
-
-			<div className={s.slider} ref={sliderRef}>
-				{promoItems.map((item) => (
-					<div key={item.id} className={s.slide}>
-						<img src={item.image} alt={item.title} />
-						<div className={s.title}>{item.title}</div>
-					</div>
-				))}
-			</div>
-
-			<button className={s.arrowRight} onClick={() => scroll('right')}>
-				›
-			</button>
-		</div>
-	)
-}
-
-export default Promo

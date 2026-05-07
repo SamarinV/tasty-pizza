@@ -1,8 +1,9 @@
-import Button from '../components/button/button'
-import MainLogo from '../components/main-logo/main-logo'
-import Search from '../components/search/search'
+
 import s from './header.module.scss'
-import ProfileIcon from '../assets/profile.svg?react'
+import ProfileIcon from '../../assets/profile.svg?react'
+import MainLogo from '../main-logo/main-logo'
+import Search from '../search/search'
+import Button from '../button/button'
 
 const Header = () => {
 	const openProfile = () => {

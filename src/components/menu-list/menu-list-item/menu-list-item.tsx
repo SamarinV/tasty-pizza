@@ -1,4 +1,4 @@
-import Button from '../../components/button/button'
+import Button from '../../button/button'
 import s from './menu-list-item.module.scss'
 
 type Props = {
