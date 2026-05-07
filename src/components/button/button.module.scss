@@ -1,0 +1,71 @@
+.btn {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 8px 16px;
+	color: #000000;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 16px;
+	box-sizing: border-box;
+	svg {
+		width: 24px;
+		height: 24px;
+	}
+
+	&:hover {
+		transition: all 0.5s ease;
+	}
+}
+
+.btn-outline {
+	&:hover {
+		color: #ff5722;
+		transition: all 0.5s ease;
+		border: 1px solid #ff5722;
+		.icon {
+			color: #ff5722;
+		}
+	}
+}
+
+.btn-prime {
+	background: #ff5722;
+	color: white;
+	&:hover {
+		background: #de3c0b;
+		box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+		border: 1px solid rgb(146, 145, 145);
+	}
+}
+
+.btn-secondary {
+	&:hover {
+		background: #f1f1f1;
+		color: #000000;
+		box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+		border: 1px solid rgb(146, 145, 145);
+	}
+}
+
+.right {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+
+	padding-left: 12px;
+	border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.active {
+	background: #f1f1f1;
+	color: #de3c0b;
+		&:hover {
+		background: #f1f1f1;
+		color: #de3c0b;
+		box-shadow: none;
+		border-color: transparent;
+		cursor: default;
+	}
+}

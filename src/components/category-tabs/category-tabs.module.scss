@@ -1,0 +1,11 @@
+.wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+.items {
+	display: flex;
+	gap: 24px;
+	background: #e7e5e5aa;
+	padding: 10px;
+	border-radius: 6px;
+}
